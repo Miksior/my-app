@@ -1,2 +1,15 @@
-<h1>test-page works!</h1>
-<p>{{testSig()}} This is a test signal.</p>
+<div class="nav-bar">
+</div>
+
+<div class="input-search">
+  <input placeholder="Search characters" (keyup)="filterHeroes($event)">
+</div>
+
+<div class="wrapper">
+  @for(character of mockDataSig(); track character){
+    <div class="hero" [routerLink]="['/{{character.id}}']"  >
+      <b>{{character.name}}</b>
+      <img class="char-image" [src]="character.image.url"/>
+    </div>
+  }
+</div>

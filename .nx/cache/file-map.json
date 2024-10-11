@@ -74,7 +74,7 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "13957676417389916521"
+        "hash": "8715890592648190174"
       },
       {
         "file": "package.json",
@@ -105,20 +105,28 @@
         "hash": "4982122511965879034"
       },
       {
+        "file": "src/app/mock-data.json",
+        "hash": "9693177108984328241"
+      },
+      {
+        "file": "src/app/test-page/character.model.ts",
+        "hash": "12993339948236341429"
+      },
+      {
         "file": "src/app/test-page/components/test-page.component.html",
-        "hash": "305972056992432971"
+        "hash": "4761942729474338621"
       },
       {
         "file": "src/app/test-page/components/test-page.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "11607176628631703988"
       },
       {
         "file": "src/app/test-page/components/test-page.component.ts",
-        "hash": "396879430507880935"
+        "hash": "10071599066226894345"
       },
       {
         "file": "src/app/test-page/services/test-page.service.ts",
-        "hash": "12967322207868014488"
+        "hash": "2303739011879220030"
       },
       {
         "file": "src/assets/.gitkeep",

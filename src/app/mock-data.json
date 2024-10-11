@@ -1,24 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
-import { TestPageService } from '../services/test-page.service';
-import { Character } from '../character.model';
-import { RouterModule } from '@angular/router';
-
-@Component({
-  selector: 'app-test-page',
-  standalone: true,
-  imports: [
-    RouterModule
-  ],
-  providers: [TestPageService],
-  templateUrl: './test-page.component.html',
-  styleUrl: './test-page.component.scss'
-})
-export class TestPageComponent {
-  public testSig = signal('Hello!');
-  public testPageSrv = inject(TestPageService)
-
-  public mockdata: Character[] =
-     [
+{
+    "characters": [
         {
             "id": "332",
             "name": "Hulk",
@@ -644,22 +625,4 @@ export class TestPageComponent {
             }
         }
     ]
-
-  public mockDataSig = signal(this.mockdata);
-
-  public filterHeroes(ev: any){
-    // this.mockDataSig.update(ev.filter())
-    console.log(ev.target?.value)
-
-    // if (!ev.target?.value) {
-    //   this.filteredLocationList = this.housingLocationList;
-    //   return;
-    // }
-
-    this.mockDataSig.update(value =>{
-      return this.mockdata.filter(
-        hero => hero?.name.toLowerCase().includes(ev.target?.value.toLowerCase())
-      );
-    })
-  }
 }

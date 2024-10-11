@@ -2,18 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
-interface TestInterface {
-  testField: string
-}
-
 @Injectable({
   providedIn: 'root'
 })
 export class TestPageService {
   private http = inject(HttpClient)
 
-  public testGet(id: number): Observable<TestInterface>{
+  public getHeroImg(id: string): Observable<any>{
     const url = `api/test/${id}`;
-    return this.http.get<TestInterface>(url)
+    return this.http.get<any>(url)
   }
 }
